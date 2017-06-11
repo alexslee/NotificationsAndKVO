@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -93,6 +94,61 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
+        <!--Third-->
+        <scene sceneID="luG-ZB-eII">
+            <objects>
+                <viewController id="1QD-A0-vLO" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="InB-Tc-Awc"/>
+                        <viewControllerLayoutGuide type="bottom" id="BzL-ov-IJc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="70q-Z9-1SC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bQ-jX-zSF">
+                                <rect key="frame" x="67" y="457" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4iV-Th-a91"/>
+                                    <constraint firstAttribute="height" constant="128" id="Zcw-Tm-JE7"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2RQ-ql-tjq">
+                                <rect key="frame" x="97.5" y="506" width="180" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="2RQ-ql-tjq" firstAttribute="centerX" secondItem="2bQ-jX-zSF" secondAttribute="centerX" id="2vc-JZ-wj0"/>
+                            <constraint firstItem="2RQ-ql-tjq" firstAttribute="width" secondItem="2bQ-jX-zSF" secondAttribute="width" multiplier="0.75" id="Zq0-LE-bK0"/>
+                            <constraint firstItem="2RQ-ql-tjq" firstAttribute="centerY" secondItem="2bQ-jX-zSF" secondAttribute="centerY" id="clY-sK-HDP"/>
+                            <constraint firstItem="BzL-ov-IJc" firstAttribute="top" secondItem="2bQ-jX-zSF" secondAttribute="bottom" constant="33" id="f9k-o8-9dm"/>
+                            <constraint firstItem="2bQ-jX-zSF" firstAttribute="centerX" secondItem="70q-Z9-1SC" secondAttribute="centerX" id="pQl-ww-QwW"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="huo-u3-FVv" appends="YES" id="tmJ-Tj-iPE"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Third" image="first" id="GhN-WR-mZT"/>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="f9k-o8-9dm" id="Tfc-d0-MhI"/>
+                        <outlet property="textField" destination="2RQ-ql-tjq" id="aS8-OX-VcS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XmT-SZ-ukm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="huo-u3-FVv">
+                    <connections>
+                        <action selector="viewTapped:" destination="1QD-A0-vLO" id="1oJ-NH-5RH"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2014" y="-321"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -106,6 +162,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="1QD-A0-vLO" kind="relationship" relationship="viewControllers" id="nXA-cf-ABj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
