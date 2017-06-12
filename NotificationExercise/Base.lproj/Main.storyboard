@@ -94,6 +94,62 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
+        <!--Fourth-->
+        <scene sceneID="Ywt-7J-Ns8">
+            <objects>
+                <viewController id="OQN-4N-RW2" customClass="FourthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rbe-8m-0ZG"/>
+                        <viewControllerLayoutGuide type="bottom" id="JWi-jv-dNH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SUr-HP-oIz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkT-Ga-Nfb" userLabel="White" customClass="WhiteView">
+                                <rect key="frame" x="68" y="269.5" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Oqy-ef-aAF"/>
+                                    <constraint firstAttribute="width" constant="240" id="lr7-g3-qsS"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sPh-gZ-w9b" appends="YES" id="E7W-aC-uEi"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2b-jw-XQy" userLabel="Yellow">
+                                <rect key="frame" x="120" y="121" width="135" height="84"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="XQZ-mo-MAz"/>
+                                    <constraint firstAttribute="height" constant="84" id="iHb-GG-ch7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HkT-Ga-Nfb" firstAttribute="centerX" secondItem="SUr-HP-oIz" secondAttribute="centerX" id="C5n-eT-wqz"/>
+                            <constraint firstItem="g2b-jw-XQy" firstAttribute="centerX" secondItem="SUr-HP-oIz" secondAttribute="centerX" id="Trb-Ef-7Gc"/>
+                            <constraint firstItem="g2b-jw-XQy" firstAttribute="top" secondItem="Rbe-8m-0ZG" secondAttribute="bottom" constant="101" id="UYN-oh-2Qc"/>
+                            <constraint firstItem="HkT-Ga-Nfb" firstAttribute="centerY" secondItem="SUr-HP-oIz" secondAttribute="centerY" id="yYI-Cg-Sp4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fourth" image="second" id="qBv-5w-Lt8"/>
+                    <connections>
+                        <outlet property="white" destination="HkT-Ga-Nfb" id="4CZ-cH-GMM"/>
+                        <outlet property="yellow" destination="g2b-jw-XQy" id="wvr-z4-6QX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZP-a5-hKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="sPh-gZ-w9b">
+                    <connections>
+                        <action selector="panGesture:" destination="HkT-Ga-Nfb" id="i3O-pW-SxG"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1861.5999999999999" y="720.08995502248877"/>
+        </scene>
         <!--Third-->
         <scene sceneID="luG-ZB-eII">
             <objects>
@@ -163,6 +219,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="1QD-A0-vLO" kind="relationship" relationship="viewControllers" id="nXA-cf-ABj"/>
+                        <segue destination="OQN-4N-RW2" kind="relationship" relationship="viewControllers" id="Qop-bc-df5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
